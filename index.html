@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>A Basic HTML5 Template</title>
+  <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="Carlos Arenas">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Headphones</h1>
+        <p>The true sound in your ears</p>
+    </div>
+      
+    <div class="topnav">
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="content">
+        <div class="filterColumn">
+            <h2>Filters</h2>
+        
+            <div class="priceFilter">
+                <span>Price</span>
+                <input class="priceInput" type="number" id="priceMin" min="0" placeholder="0" />
+                <input class="priceInput" type="number" id="priceMax" min="0" placeholder="299"/>
+            </div>
+            <div class="categoryFilter">
+                <p>Category</p>
+                <input type="checkbox" id="anc" name="anc" value="ANC" checked>
+                <label for="anc"> ANC</label><br>
+                <input type="checkbox" id="bluetooth" name="bluetooth" value="bluetooth" checked>
+                <label for="bluetooth"> Bluetooth</label><br>
+                <input type="checkbox" id="TWS" name="TWS" value="TWS" checked>
+                <label for="TWS"> TWS</label><br>
+            </div>
+            <div class="applyFilters">
+                <button type="button" onClick="filterList()">Apply</button>
+            </div>
+        </div>
+        <div class="productColumn" id="productColumnId">
+            <div class="card">
+                <div class="contentCardWrapper">
+                    <img src="assets/${product.image}" alt="${product.name}" width="150" height="150" />
+                    <p>${product.name}</p>
+                    <h3>${product.price}€</h3>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
